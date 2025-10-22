@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../../core/router/app_router.dart';
 
 class RegisterView extends StatelessWidget {
   const RegisterView({super.key});
@@ -52,7 +53,10 @@ class RegisterView extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                // 🟠 Al crear cuenta, ir al Login
+                Navigator.pushReplacementNamed(context, AppRouter.login);
+              },
               child: const Text('Crear cuenta'),
             ),
           ],
